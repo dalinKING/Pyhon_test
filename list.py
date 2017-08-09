@@ -51,3 +51,63 @@ while (ber < len(number)):
 else:
     print("you have not find %d"%Mywill)
     
+
+#  tuple test
+
+shcool=(22,"ee",90)
+print(shcool)
+print(shcool[2])
+
+print(type(shcool))
+
+# 不能修改元祖里面的值  其他跟list差不多   元祖单一 加逗号
+
+#  dict___ {key:value,key:value,key:value,key:value,key:value,key:value}
+
+info={"name":"haone","sex":"man","wife":"wangrong"}
+
+print(info.keys())
+
+print(info["sex"])
+
+print(type(info))
+
+print(info.items(),"\n",info.get("wife"))
+
+info["monly"]=8000
+print(info)
+del info["sex"]
+
+print(info.get("monly"))
+
+print(info)
+
+for n in number:
+    print(n,end='-')
+
+for n in shcool:
+    print(n,end='-')
+
+print(end='\n')
+for n in info.keys():
+    print(n,end='-')
+print(end='\n')
+for n in info.values():
+    print(n,end='-')
+print(end='\n')
+for x,y in info.items():
+    print(x,"=",y)
+print(end='\n')
+
+# ///////// enumerate !!!
+
+for i,n in enumerate(number):
+    print(i,n,end='-')
+print(end='\n')
+# 常用函数  cmp() 比较两个值    len()计算个数    max()最大值   min()   del()
+
+#  print(cmp(number,number))
+print("the max in number is:",max(number))
+print("the min in number is:",min(number))
+print("the len in info is:",len(info))
+
