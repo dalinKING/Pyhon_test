@@ -29,7 +29,7 @@ for name in range(len(number)):
 else:
     print("is none")
 
-
+print("-" *60)
 
 
 #ber = len(number)
@@ -53,7 +53,7 @@ else:
     
 
 #  tuple test
-
+print("-" *60)
 shcool=(22,"ee",90)
 print(shcool)
 print(shcool[2])
@@ -63,7 +63,7 @@ print(type(shcool))
 # 不能修改元祖里面的值  其他跟list差不多   元祖单一 加逗号
 
 #  dict___ {key:value,key:value,key:value,key:value,key:value,key:value}
-
+print("-" *60)
 info={"name":"haone","sex":"man","wife":"wangrong"}
 
 print(info.keys())
@@ -73,7 +73,7 @@ print(info["sex"])
 print(type(info))
 
 print(info.items(),"\n",info.get("wife"))
-
+print("-" *60)
 info["monly"]=8000
 print(info)
 del info["sex"]
@@ -81,7 +81,7 @@ del info["sex"]
 print(info.get("monly"))
 
 print(info)
-
+print("-" *60)
 for n in number:
     print(n,end='-')
 
@@ -100,7 +100,7 @@ for x,y in info.items():
 print(end='\n')
 
 # ///////// enumerate !!!
-
+print("-" *60)
 for i,n in enumerate(number):
     print(i,n,end='-')
 print(end='\n')
@@ -110,4 +110,73 @@ print(end='\n')
 print("the max in number is:",max(number))
 print("the min in number is:",min(number))
 print("the len in info is:",len(info))
+print("-" *60)
 
+amount =10000
+inrate =0.15
+period =5
+value = 0
+year =1
+print("-" *60)
+while year <= period:
+    value =amount + (inrate*amount)
+    print("Year {} Rs. {:.2f}".format(year,value))   # 字符串格式化 str.format()中的参数 传到 {}中
+    amount = value
+    year +=1
+
+print("-" *60)
+fahrenheit =0
+print("F.Celsius")
+while fahrenheit <=250:
+    Celsius =(fahrenheit-32)/1.8  #转为华氏温度
+    print("{:5d}  {:7.2f}".format(fahrenheit ,Celsius))
+    fahrenheit +=50
+
+
+i = 1
+print("-" *60)
+while i < 11:
+    n =1
+    while n<= 10:
+        print("{:5d}".format(i*n),end=' ')  # 乘法表！
+        n +=1
+    print()
+    i +=1
+print("-" *60)
+
+#fopen = open("./test.py")
+#fopen.read()
+
+class Person(object):
+    def __init__(self,name):
+        self.name =name
+
+    def get_details(self):
+        return self.name
+
+class Student(Person):
+    def __init__(self,name,branch,years):
+        Person.__init__(self,name)
+        self.branch =branch
+        self.years = years
+    def get_details(self):
+        return "{} studens{} and is in {} year.".format(self.name,self.branch,self.years)
+
+class Teacher(Person):
+    def __init__(self,name,papers):
+        Person.__init__(self,name)
+        self.papers =papers
+
+    def get_details(self):
+
+        return "{} teachs {}".format(self.name,','.join(self.papers))
+
+person1 =Person ('jiami')
+#studentter= Student('Kutasha','CSEA',2005)
+
+stufen = Student('Kutasha','CSEA',2005)
+teacehr1 = Teacher('piter',['C++','JAVA','PHP'])
+
+print(person1.get_details())
+print(stufen.get_details())
+print(teacehr1.get_details())
