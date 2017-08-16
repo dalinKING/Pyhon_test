@@ -13,13 +13,13 @@ def __init__(self):
         self.snakeDirection = "right"  
         self.snakeMove = [1, 0]  
         # to draw the game frame   
-        window = Tk()  
+        window = tkinter.Tk()  
         window.geometry("800x550+180+160")  
         window.maxsize(800,550)  
         window.minsize(800,550)  
         window.title("贪食蛇")  
           
-        self.canvas = Canvas(window, bg = "#191919", width = 800, height = 550)  
+        self.canvas = tkinter.Canvas(window, bg = "#191919", width = 800, height = 550)  
         self.canvas.create_line(0,500,800,500, fill = 'white')  
         self.scoretext = self.canvas.create_text(100, 520, text = 'Score: 0', font=("Purisa", 20), fill = 'white')      
         self.canvas.grid(row = 0)     

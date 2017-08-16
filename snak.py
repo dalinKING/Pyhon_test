@@ -87,7 +87,7 @@ class Snake(object):
 class SnakeGame(tkinter.Frame):  
     def __init__(self,master=None, *args, **kwargs):  
         tkinter.Frame.__init__(self, master)  
-        self.master = master  
+       # self.master = master  
         self.grid = Grid(master=master,*args, **kwargs)  
         self.snake = Snake(self.grid)  
         self.bind_all("<KeyRelease>", self.key_release)  

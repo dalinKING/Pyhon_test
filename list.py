@@ -1,9 +1,9 @@
-'''
-# list test for append , insert sort()  reverse() remove() 
+"""# list test for append , insert sort()  reverse() remove() 
 
 # just take test！！TypeError: 'int' object is not iterable
 
-# list test for append , insert sort()  reverse() remove()  '''
+# list test for append , insert sort()  reverse() remove()  
+"""
 
 
 
@@ -146,7 +146,7 @@ print("-" *60)
 
 #fopen = open("./test.py")
 #fopen.read()
-
+# 类的继承！！！！！
 class Person(object):
     def __init__(self,name):
         self.name =name
@@ -173,10 +173,64 @@ class Teacher(Person):
 
 person1 =Person ('jiami')
 #studentter= Student('Kutasha','CSEA',2005)
-
 stufen = Student('Kutasha','CSEA',2005)
 teacehr1 = Teacher('piter',['C++','JAVA','PHP'])
-
 print(person1.get_details())
 print(stufen.get_details())
 print(teacehr1.get_details())
+print("-" *60) 
+
+
+#global
+
+G_list=[22,15,48,69,3]
+
+def A() :
+    G_list.append(59)
+    return G_list
+
+print(A())
+
+#/////////  file system operation
+
+f=open("README.md",'r')
+print(f.read())
+f.seek(0,0)
+print(f.readlines())
+f.close()
+
+
+MYSTR_Llist = str(info)
+print(type(MYSTR_Llist),MYSTR_Llist)
+
+print(type(eval(MYSTR_Llist)))
+
+
+class Man_:
+    def __init__(self,name):
+        self.name = name
+        self.xue = 1000
+    
+    def reload(self,danjia,zidan):
+        danjia.save(zidan)
+class Danjia:
+    def __init__(self,conten):
+        self.contenler = conten
+        self.contenlerList = []
+    def save(self,zidan):
+        if len(self.contenlerList) < self.contenler:
+            self.contenler.append(zidan)
+            
+
+class Zidan:
+    pass
+
+class Qiang:
+    pass
+
+king = Man_("dalin")
+danjia = Danjia
+zidan = Zidan
+print(king.name)
+
+
