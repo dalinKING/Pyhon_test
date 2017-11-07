@@ -1,12 +1,13 @@
 {
     "version": "0.2.0",
     "configurations": [
+     
         {
             "name": "Python",
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
-            "pythonPath": "${config:python.pythonPath}",
+            "pythonPath": "C:\\Users\\wangd\\AppData\\Local\\Programs\\Python\\Python36",
             "program": "${file}",
             "cwd": "${workspaceRoot}",
             "env": {},
